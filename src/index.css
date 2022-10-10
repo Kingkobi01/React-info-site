@@ -1,0 +1,129 @@
+/* #21222A - blue black
+
+     #61DAFB - light blue
+         #282D35 - grey-blue
+ */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Roboto, serif;
+}
+
+.App {
+  margin: auto;
+  /* width: 65vw; */
+  min-width: 420px;
+  border: 1px solid;
+
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  border-bottom: 2px solid #21222A;
+}
+
+
+
+.navbar.dark {
+  background: #21222A;
+  color: #fff;
+  border-bottom: 2px solid #61DAFB;
+}
+
+.navbar .brand {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 40px;
+}
+
+.navbar h2 {
+  color: #61DAFB;
+  font-size: 1.9rem;
+  font-weight: lighter;
+}
+
+.toggler {
+  width: 2.2em;
+  border: 2px solid #21222A;
+  height: 1.3em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #21222A;
+
+}
+
+
+.navbar.dark .toggler {
+  justify-content: end;
+  border-color: #c2c1c1;
+}
+
+
+.toggler .circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #21222A;
+}
+
+.navbar.dark .toggler .circle {
+  background: #c2c1c1;
+}
+
+.theme {
+  display: flex;
+  gap: .5em;
+  text-transform: capitalize;
+}
+
+main {
+  background-image: url(../public/images/react-icon-dark.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 60vh;
+  padding: 4em;
+  text-align: left;
+
+}
+
+main h1 {
+  font-size: 2.25em;
+  margin-bottom: .5em;
+}
+
+main li {
+  line-height: 2em;
+  width: 40ch;
+}
+
+main ::marker {
+  color: #61DAFB;
+  font-size: 1.3rem;
+}
+
+main.dark {
+  background: #282D35;
+  background-image: url(../public/images/react-icon-light.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: #c2c1c1;
+}
